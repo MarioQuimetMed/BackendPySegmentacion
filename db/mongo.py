@@ -8,5 +8,5 @@ MONGO_URI = os.getenv('MONGO_URI')
 DB_NAME = os.getenv('DB_NAME')
 
 def get_db():
-    client = pymongo.MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+    client = pymongo.MongoClient(MONGO_URI)
     return client[DB_NAME]
